@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Dashboard</title>
+</head>
+<body id="home">
+
+    <header>
+        <nav>
+            <div class="row align-items-center">
+                <div class="col-8 justify-content-between">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <img src="img/nav-logo.png" class="img-fluid" alt="Thermal Image">
+                        </li>
+                        <li class="nav-item mt-3 ms-3">
+                            <h2>THERMAL CAMERA & FACE RECOGNITION</h2>
+                            <p><i class="fas fa-thermometer-half"></i> Today Measurement Body Temperature</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item mt-2 me-4 text-right">
+                            <img src="img/Panasonic.png" class="img-fluid nav-logo" alt="">
+                            <h4>10-12-2020 | 00:00</h4>
+                        </li>
+                        <li class="nav-item me-4">
+                            <img src="img/profile-img.png" class="img-fluid" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="info-stat mt-5">
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card-stat mr-2 mb-3">
+                        <p><i class="fa fa-user"></i> Total Employee</p>
+                        <h1>1000</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-stat mr-2 mb-3">
+                        <p><i class="fa fa-user"></i> Today Employee Measurement</p>
+                        <h1>1000</h1>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card-stat mr-2 mb-3">
+                        <p><i class="fa fa-user"></i> Today Normal Temperature</p>
+                        <h1>1000</h1>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card-stat mr-2 mb-3">
+                        <p><i class="fa fa-user"></i> Today Abnormal Temperature</p>
+                        <h1>1000</h1>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="card-stat mr-2 mb-3">
+                        <p><i class="fas fa-thermometer-half"></i> Abnormal Temperature</p>
+                        <h1>38,5C</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="infograph">
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <h5 class="title">Body Temperature Report</h5>
+                        <div class="card-body">
+                            <div class="form-group mb-3">
+                                <label for="dateInput">Date</label>
+                                <select name="" id="dateInput" class="form-select">
+                                    <option value="">-- Choice --</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="departementInput">Departement</label>
+                                <select name="" id="departementInput" class="form-select">
+                                    <option value="">-- Choice --</option>
+                                </select>
+                            </div>
+
+                            <canvas id="temp-chart" width="400" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <h5 class="title">PIDBT MAP</h5>
+                        <div class="card-body">
+                            <img src="img/map.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <h5 class="title">Recent Employee</h5>
+                        <hr>
+                        <div class="card-body">
+                            <div class="card-temperature">
+                                <table class="table table-borderless align-middle">
+                                    <tr>
+                                        <td><img src="img/profile-img.png" class="temp-img" alt=""></td>
+                                        <td>
+                                            <h6>GATE 1</h6>
+                                            <h5>Muhammad Rizky</h5>
+                                            <p><strong>BMO</strong></p>
+                                            <p>1 minute ago</p>
+                                        </td>
+                                        <td class="temp-value safe" align="center">
+                                            <img src="img/alarm-off.png" class="temp-img" alt="">
+                                            35C
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card-temperature">
+                                <table class="table table-borderless align-middle">
+                                    <tr>
+                                        <td><img src="img/profile-img.png" class="temp-img" alt=""></td>
+                                        <td>
+                                            <h6>GATE 1</h6>
+                                            <h5>Muhammad Rizky</h5>
+                                            <p><strong>BMO</strong></p>
+                                            <p>1 minute ago</p>
+                                        </td>
+                                        <td class="temp-value safe" align="center">
+                                            <img src="img/alarm-off.png" class="temp-img" alt="">
+                                            35C
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card-temperature">
+                                <table class="table table-borderless align-middle">
+                                    <tr>
+                                        <td><img src="img/profile-img.png" class="temp-img" alt=""></td>
+                                        <td>
+                                            <h6>GATE 1</h6>
+                                            <h5>Muhammad Rizky</h5>
+                                            <p><strong>BMO</strong></p>
+                                            <p>1 minute ago</p>
+                                        </td>
+                                        <td class="temp-value safe" align="center">
+                                            <img src="img/alarm-off.png" class="temp-img" alt="">
+                                            35C
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <h5 class="title">Recent Employee</h5>
+                        <hr>
+                        <div class="card-body">
+                            <div class="card-temperature">
+                                <table class="table table-borderless align-middle">
+                                    <tr>
+                                        <td><img src="img/profile-img.png" class="temp-img" alt=""></td>
+                                        <td>
+                                            <h6>GATE 1</h6>
+                                            <h5>Muhammad Rizky</h5>
+                                            <p><strong>BMO</strong></p>
+                                            <p>1 minute ago</p>
+                                        </td>
+                                        <td class="temp-value danger" align="center">
+                                            <img src="img/alarm-on.png" class="temp-img" alt="">
+                                            35C
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="navigation">
+        <nav class="mt-5">
+            <ul class="nav justify-content-center text-center">
+                <li class="nav-item me-5">
+                    <a href="">
+                        <img src="img/dep-icon.png" class="img-fluid" alt="">
+                        <h5>Departement</h5>
+                    </a>
+                </li>
+                <li class="nav-item me-5">
+                    <a href="">
+                        <img src="img/handling-icon.png" class="img-fluid" alt="">
+                        <h5>Record Handling</h5>
+                    </a>
+                </li>
+                <li class="nav-item me-5">
+                    <a href="">
+                        <img src="img/event-icon.png" class="img-fluid" alt="">
+                        <h5>Event</h5>
+                    </a>
+                </li>
+                <li class="nav-item me-5">
+                    <a href="">
+                        <img src="img/logical-icon.png" class="img-fluid" alt="">
+                        <h5>Logical View</h5>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <script>
+		var barChartData = {
+			labels: ['BBMO', 'BHR', 'BCAP', 'BRES', 'BCOIL', 'ZNR',],
+			datasets: [{
+				label: 'Normal Temperature',
+				backgroundColor: [
+                    'rgba(25, 99, 132, 0.2)',
+                    'rgba(25, 99, 132, 0.2)',
+                    'rgba(25, 99, 132, 0.2)',
+                    'rgba(25, 99, 132, 0.2)',
+                    'rgba(25, 99, 132, 0.2)',
+                    'rgba(25, 99, 132, 0.2)',
+                    ],
+				data: [ 50, 36, 34, 35, 33, 35]
+			}, {
+				label: 'Abnormal Temperature',
+				backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    ],
+				data: [ 20, 2, 12, 29, 33, 1]
+			}]
+
+		};
+		window.onload = function() {
+			var ctx = document.getElementById('temp-chart').getContext('2d');
+			window.myBar = new Chart(ctx, {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					responsive: true,
+					legend: {
+						position: 'bottom',
+					},
+					title: {
+						display: true,
+					}
+				}
+			});
+
+		};
+	</script>
+
+
+</body>
+</html>

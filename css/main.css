@@ -1,3 +1,12 @@
+body {
+    background-color: #eef7ff;
+}
+
+.container {
+    padding: 0 30px !important;
+    margin: 0 auto;
+}
+
 section.login {
     position: absolute;
     top: 50%;
@@ -42,4 +51,87 @@ section.login {
 
 input {
     background: #ddd !important;
+}
+
+header nav {
+    background-color: #DEEBF7;
+}
+
+.nav-img {
+    /* width: 100px; */
+    height: 50px;
+    /* width: 100%; */
+    margin-right: 20px;
+    padding: 0;
+    border-radius: 0;
+}
+
+.nav-logo {
+    height: 30px;
+}
+
+.info-stat .card-stat {
+    background-color: #363062;
+    padding: 20px;
+    border-radius: 14px;
+    color: white;
+}
+
+.info-stat .card-stat h1 {
+    font-size: 4rem;
+}
+
+.card {
+    padding: 20px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-temperature {
+    background-color: #eee;
+    border-radius: 14px;
+    margin-right: 0px;
+}
+
+.card-temperature img {
+    height: 45px;
+    width: 45px;
+    display: block;
+}
+
+.card-temperature h5 {
+    color: blue;
+}
+
+.card-temperature p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.card-temperature .temp-value.safe {
+    color: green;
+    font-size: 2em;
+}
+
+.card-temperature .temp-value.danger {
+    color: red;
+    font-size: 2em;
+}
+
+.gate {
+    background-color: #bbb;
+    border-radius: 14px;
+}
+
+.navigation ul li a {
+    color: #363062;
+    text-decoration: none;
+}
+
+.navigation ul li a:hover {
+    color: #9AB3F5;
+    text-decoration: none;
 }
