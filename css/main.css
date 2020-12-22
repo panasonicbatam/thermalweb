@@ -1,0 +1,45 @@
+section.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-title {
+    width: 65%;
+}
+
+.card-login {
+    background-color: white;
+    width: 800px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    margin: 0 auto;
+}
+
+.img-hero {
+    width: 100%;
+}
+
+#body-login {
+    /* background-image: url('../img/bg-img.png'); */
+    background: url('../img/bg-img.png'), rgba(200, 243, 248, 0.75);
+    background-blend-mode: overlay;
+    background-size: contain;
+    height: 100vh;
+}
+
+.btn-login {
+    background-color: #DEEBF7;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-login:hover {
+    background-color: #b4cbe0;
+    color: white;
+}
+
+input {
+    background: #ddd !important;
+}
